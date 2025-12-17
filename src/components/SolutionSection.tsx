@@ -25,9 +25,7 @@ const solutions = [
 
 const SolutionSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
-      
+    <section className="py-24 relative overflow-hidden bg-primary/5">
       <div className="section-container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -35,17 +33,21 @@ const SolutionSection = () => {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {solutions.map((solution) => (
+        <div className="space-y-6 max-w-4xl mx-auto">
+          {solutions.map((solution, index) => (
             <div
               key={solution.title}
-              className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-primary/50 transition-colors group"
+              className={`flex items-start gap-6 p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 transition-all ${
+                index % 2 === 1 ? 'flex-row-reverse text-right' : ''
+              }`}
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <solution.icon className="w-6 h-6 text-primary" />
+              <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <solution.icon className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-3">{solution.title}</h3>
-              <p className="text-sm text-muted-foreground">{solution.description}</p>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-foreground mb-2">{solution.title}</h3>
+                <p className="text-muted-foreground">{solution.description}</p>
+              </div>
             </div>
           ))}
         </div>
