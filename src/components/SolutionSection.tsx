@@ -25,7 +25,7 @@ const solutions = [
 
 const SolutionSection = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-primary/5">
+    <section className="py-24 relative overflow-hidden">
       <div className="section-container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -34,12 +34,10 @@ const SolutionSection = () => {
         </div>
 
         <div className="space-y-6 max-w-4xl mx-auto">
-          {solutions.map((solution, index) => (
+          {solutions.map((solution) => (
             <div
               key={solution.title}
-              className={`flex items-start gap-6 p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 transition-all ${
-                index % 2 === 1 ? 'flex-row-reverse text-right' : ''
-              }`}
+              className="flex items-start gap-6 p-6 rounded-2xl border border-border/50 bg-card/30 backdrop-blur-sm hover:bg-card/50 transition-all"
             >
               <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                 <solution.icon className="w-8 h-8 text-primary" />
