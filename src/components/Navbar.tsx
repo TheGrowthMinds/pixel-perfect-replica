@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import vtssLogo from "@/assets/vtss-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +23,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="relative">
-              <div className="w-12 h-12 rounded-lg bg-primary flex items-center justify-center glow-sm">
-                <span className="text-primary-foreground font-bold text-xl">V</span>
-              </div>
-            </div>
+            <img src={vtssLogo} alt="VTSS Inc." className="w-12 h-12" />
             <span className="text-2xl font-bold text-foreground">VTSS</span>
           </a>
 

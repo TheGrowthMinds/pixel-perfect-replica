@@ -1,4 +1,5 @@
 import { Phone, Mail, Linkedin } from "lucide-react";
+import vtssLogo from "@/assets/vtss-logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">V</span>
-              </div>
+              <img src={vtssLogo} alt="VTSS Inc." className="w-10 h-10" />
               <span className="text-xl font-bold text-foreground">VTSS Inc.</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-md">
