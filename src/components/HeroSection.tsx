@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Shield, ArrowRight, Server, Wifi } from "lucide-react";
+import { Shield, ArrowRight } from "lucide-react";
+import heroTeamImage from "@/assets/hero-team.jpg";
 
 const HeroSection = () => {
   return (
@@ -61,38 +62,14 @@ const HeroSection = () => {
 
           {/* Right Visual */}
           <div className="relative hidden lg:block animate-fade-in animation-delay-200">
-            <div className="relative">
-              {/* Main Card */}
-              <div className="bg-card/50 backdrop-blur-sm border border-border rounded-2xl p-8 glow-primary">
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { icon: Server, label: "Server Management" },
-                    { icon: Wifi, label: "Network Solutions" },
-                    { icon: Shield, label: "Cybersecurity" },
-                    { icon: Server, label: "Cloud Services" },
-                  ].map((item, index) => (
-                    <div
-                      key={item.label}
-                      className="bg-secondary/50 rounded-xl p-4 hover:bg-secondary transition-colors group"
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <item.icon className="w-8 h-8 text-primary mb-3 group-hover:scale-110 transition-transform" />
-                      <div className="text-sm font-medium text-foreground">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Status Indicator */}
-                <div className="mt-6 flex items-center gap-3 p-4 bg-background/50 rounded-xl">
-                  <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm text-muted-foreground">All systems operational</span>
-                </div>
-              </div>
-
-              {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-primary rounded-xl p-4 shadow-lg shadow-primary/30 animate-float">
-                <div className="text-primary-foreground text-sm font-semibold">Protected</div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={heroTeamImage} 
+                alt="Team collaboration in modern office" 
+                className="w-full h-[500px] object-cover"
+              />
+              {/* Overlay gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
           </div>
         </div>
