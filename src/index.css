@@ -4,46 +4,62 @@
 
 @layer base {
   :root {
-    --background: 220 15% 6%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 98%;
+    --foreground: 220 15% 15%;
 
-    --card: 220 15% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
 
-    --popover: 220 15% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 358 90% 28%;
+    --primary: 358 75% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 0 0% 90%;
+    --secondary: 220 10% 94%;
+    --secondary-foreground: 220 15% 25%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 358 85% 35%;
+    --accent: 358 70% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 15%;
-    --ring: 358 90% 28%;
+    --border: 220 10% 88%;
+    --input: 220 10% 90%;
+    --ring: 358 75% 45%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --glow-primary: 358 90% 28%;
-    --surface-elevated: 220 15% 12%;
-    --gradient-primary: linear-gradient(135deg, hsl(358 90% 28%) 0%, hsl(358 70% 20%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(220 15% 8%) 0%, hsl(220 15% 4%) 100%);
+    --glow-primary: 358 75% 45%;
+    --surface-elevated: 0 0% 100%;
+    --gradient-primary: linear-gradient(135deg, hsl(358 75% 45%) 0%, hsl(358 60% 55%) 100%);
+    --gradient-dark: linear-gradient(180deg, hsl(220 10% 96%) 0%, hsl(220 10% 92%) 100%);
   }
 
   .dark {
     --background: 220 15% 6%;
     --foreground: 0 0% 95%;
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 358 90% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 358 85% 35%;
+    --accent-foreground: 0 0% 100%;
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --glow-primary: 358 90% 28%;
+    --surface-elevated: 220 15% 12%;
   }
 }
 
