@@ -14,6 +14,7 @@ const Navbar = () => {
     { label: "Services", href: "/services", isRoute: true },
     { label: "About", href: isHomePage ? "#about" : "/#about", isRoute: !isHomePage },
     { label: "Consulting", href: isHomePage ? "#consulting" : "/#consulting", isRoute: !isHomePage },
+    { label: "Custom Software", href: "/custom-software", isRoute: true },
     { label: "Contact", href: isHomePage ? "#contact" : "/#contact", isRoute: !isHomePage },
   ];
 
