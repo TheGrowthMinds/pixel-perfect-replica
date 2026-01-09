@@ -508,8 +508,7 @@ const CustomSoftware = () => {
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 my-[20px]">Custom Software
-Services Catalog</h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 my-[20px]">​</h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed my-[85px]">
               VTSS Consultants provides industry-leading experts and delivery excellence across a wide array of technologies. 
               Our engineers provide expertise in Enterprise Integration, Data engineering, AI, ML, Blockchain, Web/mobile development, 
