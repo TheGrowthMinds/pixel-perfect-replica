@@ -416,7 +416,31 @@ const CustomSoftware = () => {
         </div>
       </section>
 
-      {/* SECTION 5 — HOW WE WORK */}
+      {/* SECTION — INDUSTRIES SERVED */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+        <div className="section-container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Industries <span className="text-gradient">Served</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center p-6 bg-card/50 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 transition-colors"
+              >
+                <industry.icon className="w-8 h-8 text-primary mb-3" />
+                <span className="text-sm text-foreground text-center">{industry.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION — HOW WE WORK */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="section-container relative z-10">
@@ -454,30 +478,6 @@ const CustomSoftware = () => {
                   <p className="text-sm text-muted-foreground">{model.description}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6 — INDUSTRIES SERVED */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
-        <div className="section-container relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Industries <span className="text-gradient">Served</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-6 bg-card/50 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 transition-colors"
-              >
-                <industry.icon className="w-8 h-8 text-primary mb-3" />
-                <span className="text-sm text-foreground text-center">{industry.name}</span>
-              </div>
             ))}
           </div>
         </div>
