@@ -277,24 +277,6 @@ const engagementModels = [
   { title: "Managed Services", description: "Fully managed, ongoing support" }
 ];
 
-const portfolio = [
-  {
-    name: "OrderCircle",
-    description: "B2B ordering and process automation",
-    tags: ["Integration", "Web", "Automation"]
-  },
-  {
-    name: "SamCart",
-    description: "E-commerce platform optimization",
-    tags: ["E-commerce", "Web", "Performance"]
-  },
-  {
-    name: "General Reinsurance",
-    description: "Enterprise portals and integration",
-    tags: ["Enterprise", "Integration", "Cloud"]
-  }
-];
-
 const industries = [
   { icon: ShoppingCart, name: "E-commerce" },
   { icon: Home, name: "Real Estate" },
@@ -434,7 +416,96 @@ const CustomSoftware = () => {
         </div>
       </section>
 
-      {/* SECTION 4 — SERVICE DEEP DIVES */}
+      {/* SECTION 5 — HOW WE WORK */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+        <div className="section-container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Our Delivery <span className="text-gradient">Approach</span>
+            </h2>
+          </div>
+
+          {/* Process Steps */}
+          <div className="mb-16">
+            <div className="flex flex-wrap justify-center gap-4">
+              {processSteps.map((step, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="px-6 py-3 bg-card border border-border rounded-full text-foreground font-medium">
+                    {step}
+                  </div>
+                  {index < processSteps.length - 1 && (
+                    <ArrowRight className="w-5 h-5 text-primary mx-2 hidden sm:block" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Engagement Models */}
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-foreground mb-6">Engagement Models</h3>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {engagementModels.map((model, index) => (
+              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border text-center">
+                <CardContent className="p-6">
+                  <h4 className="font-semibold text-foreground mb-2">{model.title}</h4>
+                  <p className="text-sm text-muted-foreground">{model.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 — INDUSTRIES SERVED */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+        <div className="section-container relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Industries <span className="text-gradient">Served</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center p-6 bg-card/50 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 transition-colors"
+              >
+                <industry.icon className="w-8 h-8 text-primary mb-3" />
+                <span className="text-sm text-foreground text-center">{industry.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8 — CLIENTS & PARTNERS */}
+      <section className="py-20">
+        <div className="section-container">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Trusted by <span className="text-gradient">Leading Organizations</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
+            {[...Array(6)].map((_, index) => (
+              <div
+                key={index}
+                className="aspect-[3/2] bg-card/50 border border-border rounded-lg flex items-center justify-center"
+              >
+                <span className="text-muted-foreground text-sm">Partner {index + 1}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION — SERVICE DEEP DIVES */}
       <section className="py-20">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -497,128 +568,7 @@ const CustomSoftware = () => {
         </div>
       </section>
 
-      {/* SECTION 5 — HOW WE WORK */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-        <div className="section-container relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Our Delivery <span className="text-gradient">Approach</span>
-            </h2>
-          </div>
-
-          {/* Process Steps */}
-          <div className="mb-16">
-            <div className="flex flex-wrap justify-center gap-4">
-              {processSteps.map((step, index) => (
-                <div key={index} className="flex items-center">
-                  <div className="px-6 py-3 bg-card border border-border rounded-full text-foreground font-medium">
-                    {step}
-                  </div>
-                  {index < processSteps.length - 1 && (
-                    <ArrowRight className="w-5 h-5 text-primary mx-2 hidden sm:block" />
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Engagement Models */}
-          <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-foreground mb-6">Engagement Models</h3>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {engagementModels.map((model, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border text-center">
-                <CardContent className="p-6">
-                  <h4 className="font-semibold text-foreground mb-2">{model.title}</h4>
-                  <p className="text-sm text-muted-foreground">{model.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6 — SELECTED WORK */}
-      <section className="py-20">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Selected <span className="text-gradient">Work</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {portfolio.map((project, index) => (
-              <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-colors">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-2">{project.name}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="px-3 py-1 text-xs bg-primary/10 text-primary rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7 — INDUSTRIES SERVED */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
-        <div className="section-container relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Industries <span className="text-gradient">Served</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center p-6 bg-card/50 backdrop-blur-sm border border-border rounded-xl hover:border-primary/50 transition-colors"
-              >
-                <industry.icon className="w-8 h-8 text-primary mb-3" />
-                <span className="text-sm text-foreground text-center">{industry.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8 — CLIENTS & PARTNERS */}
-      <section className="py-20">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Trusted by <span className="text-gradient">Leading Organizations</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
-            {[...Array(6)].map((_, index) => (
-              <div
-                key={index}
-                className="aspect-[3/2] bg-card/50 border border-border rounded-lg flex items-center justify-center"
-              >
-                <span className="text-muted-foreground text-sm">Partner {index + 1}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 9 — FINAL CTA */}
+      {/* SECTION — FINAL CTA */}
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/10" />
         <div className="section-container relative z-10">
