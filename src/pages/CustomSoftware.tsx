@@ -287,7 +287,8 @@ const industries = [
   { icon: Film, name: "Entertainment" },
   { icon: GraduationCap, name: "Education & Research" },
   { icon: Leaf, name: "Agriculture" },
-  { icon: Building2, name: "Small & Large Enterprises" }
+  { icon: Building2, name: "Small & Large Enterprises" },
+  { icon: Shield, name: "Insurance" }
 ];
 
 const CustomSoftware = () => {
@@ -371,7 +372,7 @@ const CustomSoftware = () => {
 
       {/* SECTION 3 — WHY VTSS */}
       <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -418,7 +419,7 @@ const CustomSoftware = () => {
 
       {/* SECTION — INDUSTRIES SERVED */}
       <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
         <div className="section-container relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
@@ -570,7 +571,7 @@ const CustomSoftware = () => {
 
       {/* SECTION — FINAL CTA */}
       <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-primary/10" />
         <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
